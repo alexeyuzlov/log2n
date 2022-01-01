@@ -1,9 +1,11 @@
-import "../styles/style.scss";
-import { search } from "./app/binary";
-import { DateUtils } from "./app/utils/date/date";
+import '../styles/style.scss';
 
-const resultIndex: number = search([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 0);
-console.info("binary search result", resultIndex);
+import { search } from './app/binary';
+import { selectionSort } from './app/selection-sort';
 
-// const date = DateUtils.now();
-// console.info(date);
+const arr: number[] = [5, 9, 4, 8, 2, 0, 6, 7, 3, 1];
+const selectionSortedArr: number[] = selectionSort(arr);
+// const resultIndex: number = search(selectionSortedArr, 0);
+
+console.info('selection sort result', selectionSortedArr, arr);
+// console.info("binary search result", resultIndex);
