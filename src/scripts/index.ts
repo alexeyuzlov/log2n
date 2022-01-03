@@ -1,6 +1,7 @@
 import '../styles/style.scss';
 import { selectionSort } from './app/selection-sort';
 import { LinkedItem, LinkedList } from './app/linked-list';
+import { quickSort } from './app/quick-sort';
 
 const arr: number[] = [5, 9, 4, 8, 2, 0, 6, 7, 3, 1];
 const selectionSortedArr: number[] = selectionSort(arr);
@@ -19,3 +20,6 @@ list.clear();
 list.add(new LinkedItem<number>(1));
 
 // console.info(list.toArray(), list.size);
+
+let result = quickSort(arr, -1);
+console.info(result);

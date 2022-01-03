@@ -2,7 +2,7 @@ function findMinOrMaxIndex<T>(arr: T[], minOrMax: 1 | -1 = 1): number {
     let index: number = 0;
 
     for (let i = 0; i < arr.length; i++) {
-        if (minOrMax > 0 ? arr[index] <= arr[i] : arr[index] >= arr[i]) {
+        if (minOrMax < 0 ? arr[index] <= arr[i] : arr[index] >= arr[i]) {
             index = i;
         }
     }
