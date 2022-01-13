@@ -2,6 +2,7 @@ import '../styles/style.scss';
 import { selectionSort } from './app/selection-sort';
 import { LinkedItem, LinkedList } from './app/linked-list';
 import { quickSort } from './app/quick-sort';
+import { Node, search } from './app/bfs';
 
 const arr: number[] = [5, 9, 4, 8, 2, 0, 6, 7, 3, 1];
 const selectionSortedArr: number[] = selectionSort(arr);
@@ -22,4 +23,21 @@ list.add(new LinkedItem<number>(1));
 // console.info(list.toArray(), list.size);
 
 let result = quickSort(arr, -1);
-console.info(result);
+// console.info(result);
+
+const you = new Node('You');
+const alice = new Node('Alice');
+const peggi = new Node('Peggi');
+const bob = new Node('Bob');
+const anuj = new Node('Anuj');
+const jonny = new Node('Jonny');
+const klaire = new Node('Klaire');
+const thom = new Node('Thom');
+
+you.children = [bob, klaire, alice];
+bob.children = [anuj, peggi];
+alice.children = [peggi];
+klaire.children = [thom, jonny];
+
+const item = search(you, 'Thom');
+console.info(item);
