@@ -47,4 +47,4 @@ let graphWithWeight = new WeightGraph();
 graphWithWeight.addNode(GraphPosition.Start, {a: 6, b: 2});
 graphWithWeight.addNode('b', {a: 3, [GraphPosition.End]: 5});
 graphWithWeight.addNode('a', {[GraphPosition.End]: 1});
-console.table(graphWithWeight.search());
+// console.table(graphWithWeight.search());
