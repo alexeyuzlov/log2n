@@ -3,6 +3,7 @@ import { selectionSort } from './app/selection-sort';
 import { LinkedItem, LinkedList } from './app/linked-list';
 import { quickSort } from './app/quick-sort';
 import { Node, search } from './app/bfs';
+import { GraphPosition, WeightGraph } from './app/dijkstra';
 
 const arr: number[] = [5, 9, 4, 8, 2, 0, 6, 7, 3, 1];
 const selectionSortedArr: number[] = selectionSort(arr);
@@ -40,4 +41,10 @@ alice.children = [peggi];
 klaire.children = [thom, jonny];
 
 const item = search(you, 'Thom');
-console.info(item);
+// console.info(item);
+
+let graphWithWeight = new WeightGraph();
+graphWithWeight.addNode(GraphPosition.Start, {a: 6, b: 2});
+graphWithWeight.addNode('b', {a: 3, [GraphPosition.End]: 5});
+graphWithWeight.addNode('a', {[GraphPosition.End]: 1});
+console.table(graphWithWeight.search());
