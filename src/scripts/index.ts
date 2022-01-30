@@ -4,6 +4,7 @@ import { LinkedItem, LinkedList } from './app/linked-list';
 import { quickSort } from './app/quick-sort';
 import { Node, search } from './app/bfs';
 import { GraphPosition, WeightGraph } from './app/dijkstra';
+import { Item, ItemList } from './app/dynamic';
 
 const arr: number[] = [5, 9, 4, 8, 2, 0, 6, 7, 3, 1];
 const selectionSortedArr: number[] = selectionSort(arr);
@@ -48,3 +49,11 @@ graphWithWeight.addNode(GraphPosition.Start, {a: 6, b: 2});
 graphWithWeight.addNode('b', {a: 3, [GraphPosition.End]: 5});
 graphWithWeight.addNode('a', {[GraphPosition.End]: 1});
 // console.table(graphWithWeight.search());
+
+const itemList = new ItemList([
+    new Item('guitar', 1500, 1),
+    new Item('recorder', 3000, 4),
+    new Item('notebook', 2000, 3),
+], 4);
+
+console.info('Total price for weight of', itemList.totalWeight, itemList.calc());
