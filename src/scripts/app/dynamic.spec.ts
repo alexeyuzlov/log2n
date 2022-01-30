@@ -1,6 +1,6 @@
 import { Item, ItemList } from './dynamic';
 
-describe('dijkstra', () => {
+describe('dynamic', () => {
     let itemList: ItemList;
 
     beforeEach(() => {
@@ -8,7 +8,7 @@ describe('dijkstra', () => {
             new Item('guitar', 1500, 1),
             new Item('recorder', 3000, 4),
             new Item('notebook', 2000, 3),
-            new Item('dynamic', 2000, 1),
+            new Item('phone', 2000, 1),
         ], 4);
     });
 
