@@ -54,6 +54,17 @@ const itemList = new ItemList([
     new Item('guitar', 1500, 1),
     new Item('recorder', 3000, 4),
     new Item('notebook', 2000, 3),
+    new Item('phone', 2000, 1),
 ], 4);
 
-console.info('Total price for weight of', itemList.totalWeight, itemList.calc());
+// console.info('Total price for weight of', itemList.totalWeight, itemList.calc());
+
+const travel = new ItemList([
+    new Item('Vestminster', 7, 12),
+    new Item('Globus', 6, 12),
+    new Item('Gallery', 9, 24),
+    new Item('Museum', 9, 48),
+    new Item('Pavel St', 8, 12),
+], 48);
+
+console.info(travel.calc());
