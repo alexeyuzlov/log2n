@@ -5,6 +5,7 @@ import { quickSort } from './app/quick-sort';
 import { Node, search } from './app/bfs';
 import { GraphPosition, WeightGraph } from './app/dijkstra';
 import { Item, ItemList } from './app/dynamic';
+import { maxCommonLongLength } from './app/max-common-long-length';
 
 const arr: number[] = [5, 9, 4, 8, 2, 0, 6, 7, 3, 1];
 const selectionSortedArr: number[] = selectionSort(arr);
@@ -67,4 +68,8 @@ const travel = new ItemList([
     new Item('Pavel St', 8, 12),
 ], 48);
 
-console.info(travel.calc());
+// console.info(travel.calc());
+
+console.info(maxCommonLongLength('hish', 'fish'));
+console.info(maxCommonLongLength('hish', 'vista'));
+console.info(maxCommonLongLength('fish', 'fosh'));
